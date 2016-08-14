@@ -1,0 +1,29 @@
+/*
+ * Copyright (C) 2010 The MobileSecurePay Project
+ * All right reserved.
+ * author: shiqun.shi@alipay.com
+ */
+
+package mobilepay;
+
+//
+// 请参考 Android平台安全支付服务(msp)应用开发接口(4.2 RSA算法签名)部分，并使用压缩包中的openssl RSA密钥生成工具，生成一套RSA公私钥。
+// 这里签名时，只需要使用生成的RSA私钥。
+// Note: 为安全起见，使用RSA私钥进行签名的操作过程，应该尽量放到商家服务器端去进行。
+public final class Keys {
+
+	public static final String DEFAULT_PARTNER = "2088901007825435";
+	// public static final String DEFAULT_PARTNER = "2088301679845483";
+
+	public static final String DEFAULT_SELLER = "2088901007825435";
+	// public static final String DEFAULT_SELLER = "2088301679845483";
+
+	public static final String PRIVATE = "MIICeAIBADANBgkqhkiG9w0BAQEFAASCAmIwggJeAgEAAoGBAMCsovVkgspYJeFDoutLarl/uN7zEQ88GAPOYrWavqzarD2V02x4gYEdLyyVtIptaHje7OocIBfkIMzXbIPmTrihUEDSL+oBcAFUXg03qdOpG8/W7n9Oy6TswRd6/c9GbiZd9uwBSoT4mlAfvc1sPFjRG7hvAR9/W87tpLBShAufAgMBAAECgYEAvZZh90MCq2ZXR7RNEGgySPtThxX3+FyyaLRhTr9I1j+J8kOGOZrOG6UC8UUR1JBZl24MA0TPk5Knb8id/5/UXoFFMluXRSy+jfbrS435djBpalrdT4/v4LVdbjlLOmcNcGVgqdhm/ymzim2uZM26VulaAeSwLQ/JDGvd3JmxLXECQQD+dB2W+yCgTLFU9xr3Px2hf9qn1Ds4lbgeFCh0cc+0dG219+UflA6QLFjkKDE727E0S1onisSnz5eTQr7FhmF3AkEAwdhnTVmBEdKTdVwJEaUJ30snTzg0Vm2gaF+YiGeo+NhnsGdrbKLhmv1xBGSiAx4NDctnsltNPNcrRvwtE1lxGQJBAN0rCF0nQqCSiMCVWDb4AUVS4DdoXWE9oZ9jXhZ4plTvrjywj9L22gGuykTmOoUQ2+HcbSxZjb1ezx0Mssz1lNkCQAzXv5BaW7jIkMh3vooSuyK2IfaXrLAFN1ly6/Itm/5QqB4B3BYofHX+UJyP5kP6m7bMQSSJ9AYR42YikwHzLRECQQChv8yUG4qnEkYRNMDx/NpJEqi2Axsec2hofErio4on5z3FtcFW9xVJcYvNv1W6k62d1mM/qikDv7cbDUrU5tqm";
+	// public static final String PRIVATE =
+	// "MIICdQIBADANBgkqhkiG9w0BAQEFAASCAl8wggJbAgEAAoGBAI/qArl/1V47ylXHKt8ReocgPj2HORyJkTT68r0vqSNpnxV58YUo61p0fJbW2eN+ayU8EwLsDEoDUsxEC32OJ5X1VsLV4twDc9xTqTZgxYHeF+IK8I6yw92XJJGXaJy7zLb1C85FxzaEs0cqnqBxjx0kUIxsaw1PfG4ZjbmN8jn9AgMBAAECgYAbD3JxtOLG9FEobenWxe+XJu3tHdcUUZ23K5SnFCYmnX6nSCWs1zPh71NZ/Y4845F8D963RvFMnXFdLVJHyooQtRKMXH6zCFMpQG+gh5j+X9gVCMjkvEQBWXlrW+JoPxwrAm2OulOTeAh39pIOwfvCTq9VoZaEWhcR6t5mvP3NoQJBAM4P0ZiTORn7Z8sWXpji+ybISRampKDbfisfcYkaaAlr2v71CvYk1RMxWxUneckehw7bL6TwiCZjNLHN91i2gTkCQQCyyoRR1a5bqX20CSG2HLHIxcNwr5fSXWwgMvoto0X4W58klyov5+UuM1VodTEArX11DD0UVwSzh15ice0Oj7LlAkBIy23P6LKTay0Poadpe0YePUMUrWobKW847LK/LIT0TxXeW9Kzge+ECDuVDY0Ib7BmnygFrLNsXD+RUKHAxTiBAkAG0UgYYsCCSEU9zzdU3WU+FaRtMJTmdZ+A3tDBWr95R+0alRULvJj1mQmBsS5MK1FkXDIcC3Fncxr7QALdEketAkBtRA0Q5G5gQiha0n4X175w+uo+7QcFi3TB3/oMwYO3QfOB4b03YN6qYimsu/68kBHqfsbcdrWnKl3tJDlhgZS/";
+
+	public static final String PUBLIC = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCY4kin/Pk89ya/37y9rU5U2LH+HoMGCbncMvTOACPcVkQxq9zCkewRTupW3/rhwOOERTwymVza0x99IciSi00WUr7cvOx8YZOKQObB1JYeWDCvhUsNWhjLbylvZxE3kjQesM7ORLfQTQK1uSMUptZzYt5uKLChN7Qrw+qaM0gC7wIDAQAB";
+	// public static final String PUBLIC =
+	// "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCP6gK5f9VeO8pVxyrfEXqHID49hzkciZE0+vK9L6kjaZ8VefGFKOtadHyW1tnjfmslPBMC7AxKA1LMRAt9jieV9VbC1eLcA3PcU6k2YMWB3hfiCvCOssPdlySRl2icu8y29QvORcc2hLNHKp6gcY8dJFCMbGsNT3xuGY25jfI5/QIDAQAB";
+
+}
